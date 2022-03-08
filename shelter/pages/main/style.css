@@ -114,6 +114,9 @@
     transition-delay: calc((var(--n) - 1) * 0.1s);
     z-index: -1;
 }
+.button:hover {
+    border-color: var(--color-primary-light);
+}
 
 .button:hover span {
     transform: translateY(0) scale(2);
@@ -261,4 +264,86 @@
 
 .about__text {
     color: var(--color-dark-xl);
+}
+
+/**** Pets ****/
+
+.container-pets {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 60px;
+}
+
+.pets__title {
+    color: var(--color-dark-l);
+    text-align: center;
+}
+
+.carousel-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.carousel {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 90px;
+}
+
+.card {
+    width: 270px;
+    height: 435px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.card__title {
+    color: var(--color-dark-l);
+}
+
+.card__button {
+    width: 187px;
+}
+
+.carousel-control {
+    position: absolute;
+    width: 52px;
+    height: 52px;
+    border-radius: 100px;
+    border: 2px solid var(--color-primary);
+    background: transparent;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.carousel-control:hover {
+    background-color: var(--color-primary-light);
+    border-color: var(--color-primary-light);
+}
+
+.carousel-control.inactive {
+    border-color: var(--color-dark-s);
+}
+
+.carousel-control.inactive svg {
+    fill: var(--color-dark-s);
+}
+
+.carousel-control svg {
+    fill: var(--color-dark-3xl);
+}
+
+.carousel-control-next {
+    right: 0;
+}
+
+.pets__button {
+    width: 261px;
+    margin: 0 auto;
 }
