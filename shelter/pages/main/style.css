@@ -4,6 +4,8 @@
     --color-primary: #f1cdb3;
     --color-primary-light: #fddcc4;
     --color-dark-3xl: #292929;
+    --color-dark-xl: #4c4c4c;
+    --color-dark-l: #545454;
     --color-dark-s: #cdcdcd;
     --color-light-xl: #ffffff;
     --color-light-s: #fafafa;
@@ -208,26 +210,55 @@
 
 /**** MAIN ****/
 
-/**** About ****/
+/**** Start Screen ****/
 
-.container-about {
+.container-start {
     background-image: url(../../assets/images/png/start-screen-puppy.png), url(../../assets/images/jpg/start-screen-background.jpg);
     background-position: right bottom, 0 -180px;
     background-repeat: no-repeat;
     padding: 163px 40px 243px 40px;
 }
 
-.content {
+.content-start {
     max-width: 460px;
     display: flex;
     flex-direction: column;
     gap: 42px;
 }
 
-.about-title {
+.start-screen__title {
     color: var(--color-light-xl);
 }
 
-.about-text {
+.start-screen__text {
     color: var(--color-dark-s);
+}
+
+/**** About ****/
+
+.container-about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-about {
+    max-width: 430px;
+    margin-left: 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.about__image {
+    width: 300px;
+    height: 408px;
+}
+
+.about__title {
+    color: var(--color-dark-l);
+}
+
+.about__text {
+    color: var(--color-dark-xl);
 }
