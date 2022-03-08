@@ -1,0 +1,31 @@
+/**** Frank Ruhl Libre ****/
+
+@font-face {
+    font-family: 'Frank Ruhl Libre';
+    font-style: normal;
+    font-weight: 400;
+    src: url(./frank_ruhl_libre/FrankRuhlLibre-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Frank Ruhl Libre';
+    font-style: normal;
+    font-weight: 700;
+    src: url(./frank_ruhl_libre/FrankRuhlLibre-Bold.ttf);
+}
+
+/**** Poppins ****/
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    src: url(./poppins/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    src: url(./poppins/Poppins-Bold.ttf);
+}
