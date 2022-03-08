@@ -6,6 +6,7 @@
     --color-dark-3xl: #292929;
     --color-dark-xl: #4c4c4c;
     --color-dark-l: #545454;
+    --color-dark-m: #b2b2b2;
     --color-dark-s: #cdcdcd;
     --color-light-xl: #ffffff;
     --color-light-s: #fafafa;
@@ -375,3 +376,48 @@
     gap: 30px;
     color: var(--color-dark-l);
 }
+
+/**** Donation ****/
+
+.container-donation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.donation__image {
+    width: 505px;
+    height: 261px;
+}
+
+.donation__content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 380px;
+    margin-left: 30px;
+}
+
+.donation__title {
+    color: var(--color-dark-l);
+}
+
+.credit-card {
+    padding: 10px 15px;
+    background-color: var(--color-primary);
+    border-radius: 9px;
+    display: inline-block;
+}
+
+.credit-card::before {
+    content: url(../../assets/icons/credit-card.svg);
+    margin-right: 15px;
+    vertical-align: middle;
+}
+
+.donation__text {
+    color: var(--color-dark-m);
+}
+
+/**** FOOTER ****/
+
