@@ -5,7 +5,7 @@
     --color-primary-light: #fddcc4;
     --color-dark-3xl: #292929;
     --color-dark-s: #cdcdcd;
-
+    --color-light-xl: #ffffff;
     --color-light-s: #fafafa;
 }
 
@@ -85,6 +85,9 @@
     letter-spacing: 0.06em;
     cursor: pointer;
     transition: .3s;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
 }
 
 .button_primary {
@@ -97,12 +100,41 @@
     border: 2px solid var(--color-primary);
 }
 
-.button_primary:hover,
-.button_secondary:hover {
+.button span {
+    position: absolute;
+    width: 25%;
+    height: 100%;
     background-color: var(--color-primary-light);
+    transform: translateY(150%);
+    border-radius: 50%;
+    left: calc((var(--n) - 1) * 25%);
+    transition: .3s;
+    transition-delay: calc((var(--n) - 1) * 0.1s);
+    z-index: -1;
+}
+
+.button:hover span {
+    transform: translateY(0) scale(2);
+}
+
+.button span:nth-child(1) {
+    --n: 1;
+}
+
+.button span:nth-child(2) {
+    --n: 2;
+}
+
+.button span:nth-child(3) {
+    --n: 3;
+}
+
+.button span:nth-child(4) {
+    --n: 4;
 }
 
 /**** HEADER ****/
+
 .container-header {
     padding: 60px 40px;
     background-image: url(../../assets/images/jpg/start-screen-background.jpg);
@@ -123,7 +155,7 @@
 }
 
 .logo-text {
-    color: #ffffff;
+    color: var(--color-light-xl);
     font-size: 13px;
     line-height: 15px;
     letter-spacing: 0.1em;
@@ -172,4 +204,30 @@
 
 .link-active.nav-list__item-link::after {
     width: 100%;
+}
+
+/**** MAIN ****/
+
+/**** About ****/
+
+.container-about {
+    background-image: url(../../assets/images/png/start-screen-puppy.png), url(../../assets/images/jpg/start-screen-background.jpg);
+    background-position: right bottom, 0 -180px;
+    background-repeat: no-repeat;
+    padding: 163px 40px 243px 40px;
+}
+
+.content {
+    max-width: 460px;
+    display: flex;
+    flex-direction: column;
+    gap: 42px;
+}
+
+.about-title {
+    color: var(--color-light-xl);
+}
+
+.about-text {
+    color: var(--color-dark-s);
 }
