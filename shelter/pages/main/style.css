@@ -144,6 +144,7 @@
 .container-header {
     padding: 60px 40px;
     background-image: url(../../assets/images/jpg/start-screen-background.jpg);
+    background-size: cover;
     display: flex;
 }
 
@@ -212,6 +213,11 @@
     width: 100%;
 }
 
+.toggle,
+.toggle.hidden {
+    display: none;
+}
+
 /**** MAIN ****/
 
 /**** Start Screen ****/
@@ -220,6 +226,7 @@
     background-image: url(../../assets/images/png/start-screen-puppy.png), url(../../assets/images/jpg/start-screen-background.jpg);
     background-position: right bottom, 0 -180px;
     background-repeat: no-repeat;
+    background-size: auto, cover;
     padding: 163px 40px 243px 40px;
 }
 
@@ -425,6 +432,7 @@
     padding: 40px 40px 0;
     background-image: url(../../assets/images/png/footer-background.png);
     background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .footer__content {
@@ -480,10 +488,10 @@
 
 /******** 768px ********/
 
-@media (max-width: 768px) {
+@media (max-width: 1279px) {
 
     .container {
-        width: 100%;
+        max-width: 768px;
         padding: 80px 30px 100px;
     }
 
@@ -591,3 +599,189 @@
 
 }
 
+/******** 320px ********/
+
+@media (max-width: 767px) {
+
+        .container {
+            width: 100%;
+            padding: 42px 10px;
+        }
+
+        .header2 {
+            font-size: 25px;
+        }
+
+        .header3 {
+            font-size: 25px;
+        }
+
+        .header4 {
+            font-size: 15px;
+            line-height: 110%;
+        }
+
+        /**** HEADER ****/
+
+        .container-header {
+            display: flex;
+            align-items: center;
+            padding: 30px 53px 30px 10px;
+        }
+
+        .nav {
+            display: none;
+        }
+
+        .toggle {
+            width: 30px;
+            height: 22px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            cursor: pointer;
+        }
+
+        .toggle .line {
+            width: 100%;
+            height: 2px;
+            background-color: var(--color-primary);
+            transition: .3s;
+        }
+
+        /**** MAIN ****/
+
+        /**** Start Screen ****/
+
+        .container-start {
+            background-image: url(../../assets/images/png/start-screen-puppy-s.png), url(../../assets/images/jpg/start-screen-gradient-background-m.png);
+            background-position: right bottom, top;
+            background-repeat: no-repeat;
+            padding: 150px 10px 376px;
+        }
+
+        .content-start {
+            text-align: center;
+        }
+
+        /**** About ****/
+
+        .content-about {
+            margin-bottom: 42px;
+        }
+
+        .about__title {
+            text-align: center;
+        }
+
+        .about__text {
+            text-align: justify;
+        }
+
+        .about__image {
+            width: 260px;
+            height: auto;
+        }
+
+        /**** Pets ****/
+
+        .carousel-container {
+            height: 507px;
+            align-items: flex-start;
+        }
+
+        .carousel-control {
+            bottom: 0;
+        }
+
+        .carousel-control-prev {
+            left: 43px;
+        }
+
+        .carousel-control-next {
+            right: 43px;
+        }
+
+        .card {
+            margin: 0 15px;
+        }
+
+        .card__title {
+            font-size: 20px;
+            line-height: 23px;
+        }
+
+         /**** Help ****/
+
+        .container-help {
+            padding: 42px 15px;
+        }
+
+        .tiles {
+            gap: 30px;
+            justify-content: flex-start;
+        }
+
+        .tile {
+            width: 130px;
+            height: 87px;
+            gap: 20px;
+        }
+
+        .tile img {
+            width: 50px;
+            height: 50px;
+         }
+
+         /**** Donation ****/
+
+        .donation__content {
+            margin-bottom: 45px;
+        }
+
+        .donation__image {
+            width: 260px;
+            height: auto;
+        }
+
+        .donation__title {
+            text-align: center;
+        }
+
+        .donation__text {
+            text-align: justify;
+        }
+
+        /**** FOOTER ****/
+
+        .container-footer {
+            padding: 30px 10px 0;
+            background-image: url(../../assets/images/png/footer-gradient-background-s.png);
+        }
+
+        .footer__content {
+            gap: 40px;
+        }
+
+        .footer__title {
+            text-align: center;
+        }
+
+        .contacts .footer__list {
+            align-items: center;
+        }
+
+        .footer__list-item {
+            text-align: justify;
+        }
+
+        .contacts,
+        .locations {
+            width: 100%;
+        }
+
+        .footer__image {
+            width: 260px;
+            height: 269px;
+        }
+}
